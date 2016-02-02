@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageToText" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aeJ-X1-yQf">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0OH-fB-WXb"/>
+                                    <constraint firstAttribute="width" constant="20" id="yvN-Wy-84M"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Choose an Image" translatesAutoresizingMaskIntoConstraints="NO" id="ujR-He-gQZ">
+                                <rect key="frame" x="20" y="30" width="560" height="470"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRS-50-UaU">
+                                <rect key="frame" x="20" y="520" width="560" height="60"/>
+                                <color key="backgroundColor" red="0.18823529411764706" green="0.63529411764705879" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NUM-0F-ZGC"/>
+                                </constraints>
+                                <state key="normal" title="Choose Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="imageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1lA-tP-tYC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ujR-He-gQZ" secondAttribute="trailing" constant="20" id="01M-8b-Fq3"/>
+                            <constraint firstItem="ujR-He-gQZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="2eC-QP-Amo"/>
+                            <constraint firstItem="DRS-50-UaU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="4sU-0f-4Sw"/>
+                            <constraint firstAttribute="trailing" secondItem="DRS-50-UaU" secondAttribute="trailing" constant="20" id="9MW-fg-mMn"/>
+                            <constraint firstItem="aeJ-X1-yQf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ASg-Uv-dg7"/>
+                            <constraint firstItem="ujR-He-gQZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Jg0-mU-hf1"/>
+                            <constraint firstItem="DRS-50-UaU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sfh-Gw-B7Z"/>
+                            <constraint firstItem="aeJ-X1-yQf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a81-te-rDZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DRS-50-UaU" secondAttribute="bottom" constant="20" id="de7-dg-4sq"/>
+                            <constraint firstItem="DRS-50-UaU" firstAttribute="top" secondItem="ujR-He-gQZ" secondAttribute="bottom" constant="20" id="g2Q-QL-O39"/>
+                            <constraint firstItem="DRS-50-UaU" firstAttribute="top" secondItem="ujR-He-gQZ" secondAttribute="bottom" constant="20" id="jbJ-eS-RDs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="aeJ-X1-yQf" id="fco-zE-3l6"/>
+                        <outlet property="imageButton" destination="DRS-50-UaU" id="Ylo-tZ-Ie3"/>
+                        <outlet property="textView" destination="ujR-He-gQZ" id="OjU-F0-a0S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>
